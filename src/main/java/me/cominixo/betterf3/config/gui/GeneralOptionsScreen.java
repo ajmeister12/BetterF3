@@ -23,13 +23,13 @@ public class GeneralOptionsScreen {
         ConfigCategory general = builder.getOrCreateCategory(new TranslatableText("config.betterf3.title.general"));
 
         general.addEntry(entryBuilder.startBooleanToggle(new TranslatableText("config.betterf3.disable"), GeneralOptions.disableMod)
-                .setDefaultValue(false)
+                .setDefaultValue(true)
                 .setTooltip(new TranslatableText("config.betterf3.disable.tooltip"))
                 .setSaveConsumer(newValue -> GeneralOptions.disableMod = newValue)
                 .build());
 
         general.addEntry(entryBuilder.startBooleanToggle(new TranslatableText("config.betterf3.space_modules"), GeneralOptions.spaceEveryModule)
-                .setDefaultValue(false)
+                .setDefaultValue(true)
                 .setTooltip(new TranslatableText("config.betterf3.space_modules.tooltip"))
                 .setSaveConsumer(newValue -> GeneralOptions.spaceEveryModule = newValue)
                 .build());
